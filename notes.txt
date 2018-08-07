@@ -1,18 +1,21 @@
 git notes:
-git init==>to initialize git in to the folder
+1.git init==>to initialize git in to the folder
 |git config --global user.name 'nabin thapa'
 |git config --global user.email 'nabinthapant@hotmail.com'==> to add name and email
 in to the git repo
--git add <file name> --> add the file to the unstagging area.
+git status-> to check the status of commit
+-2.git add <file name> --> add the file to the unstagging area.
 -git rm --cached <filename> --> to remove the file in the staging area.(make file untracked)
 -git add . ==> will add everything in the staging area
--git commit ==> to commit! by editing the vim editor and make a commit
+-3.git commit ==> to commit! by editing the vim editor and make a commit
 -git commit -m 'comment'==> to commit without going to the vim editor
 -make .gitignore file and add the name of file and directives which you dont want to add
 Branches:
 git branch <branch name>--> to create the branch
 git checkout <branch  name> =>to switch to particular branch
-
+git merge <branch name> ==> to merge the changes made.
+4.git remote add origin https://git@github.com:thapanabin/pythonbasics.git-->
+5.git push -u origin master
 
 
 
