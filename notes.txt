@@ -6,7 +6,7 @@ in to the git repo
 -git add <file name> --> add the file to the unstagging area.
 -git rm --cached <filename> --> to remove the file in the staging area.(make file untracked)
 -git add . ==> will add everything in the staging area
--git commit ==> to commit
+-git commit ==> to commit!
 
 
 
