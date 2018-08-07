@@ -8,7 +8,8 @@ in to the git repo
 -git add . ==> will add everything in the staging area
 -git commit ==> to commit! by editing the vim editor and make a commit
 -git commit -m 'comment'==> to commit without going to the vim editor
--
+-make .gitignore file and add the name of file and directives which you dont want to add
+
 
 
 
