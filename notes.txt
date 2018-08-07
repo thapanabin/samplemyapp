@@ -1,0 +1,12 @@
+git notes:
+git init==>to initialize git in to the folder
+|git config --global user.name 'nabin thapa'
+|git config --global user.email 'nabinthapant@hotmail.com'==> to add name and email
+in to the git repo
+-git add <file name> --> add the file to the unstagging area.
+-git rm --cached <filename> --> to remove the file in the staging area.(make file untracked)
+-git add . ==> will add everything in the staging area
+-git commit ==> to commit
+
+
+
