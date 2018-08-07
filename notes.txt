@@ -9,6 +9,9 @@ in to the git repo
 -git commit ==> to commit! by editing the vim editor and make a commit
 -git commit -m 'comment'==> to commit without going to the vim editor
 -make .gitignore file and add the name of file and directives which you dont want to add
+Branches:
+git branch <branch name>--> to create the branch
+git checkout <branch  name> =>to switch to particular branch
 
 
 
