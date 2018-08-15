@@ -53,3 +53,4 @@ to_char(sysdate,'yyyy')-to_char(hire_date,'yyyy')=&year;// to see the date exper
 -select to_char(hire_date,'dy') as hire_date from hr.employees where to_char(hire_date,'dy')='FRI';
 -select to_char(hire_date,'dd') as hire_date from hr.employees where to_char(hire_date,'dd')=24;
 
+			Thank you
