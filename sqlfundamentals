@@ -1,0 +1,55 @@
+1.select EMPLOYEE_ID, FIRST_NAME, LAST_NAME, HIRE_DATE where DEPARTMENT_ID is 50 or 70 ? 
+-select employee_id,first_name,last_name,hire_date,department_id from hr.employees where department_id like '50' or department_id like '70';
+-select employee_id,first_name,last_name,hire_date,department_id from hr.employees where department_id in (50,70);
+-select employee_id,first_name,last_name,hire_date,department_id from hr.employees where department_id=50 or department_id=70;
+
+2.Select all column form Employees who has completed 12 from now?
+-select employee_id,first_name,last_name,email,phone_number,hire_date,to_char(hire_date,'yyyy') as joining_year,
+(to_char(sysdate,'yyyy')-to_char(hire_date,'yyyy')) as experience,department_id from Hr.employees where 
+to_char(sysdate,'yyyy')-to_char(hire_date,'yyyy')=12;
+
+select employee_id,first_name,last_name,email,phone_number,hire_date,to_char(hire_date,'yyyy') as joining_year,
+(to_char(sysdate,'yyyy')-to_char(hire_date,'yyyy')) as experience,department_id from Hr.employees where 
+to_char(sysdate,'yyyy')-to_char(hire_date,'yyyy')=&year;// to see the date experience year wise
+
+
+3.Select all Employees from Employees who work in department 50 and 70 and receive commission ? *
+-select employee_id,first_name,last_name,hire_date from hr.employees where department_id in (50,70) and commission_pct is NOT null;
+
+4.Select all Employees from Employees who work in who does not receive commission ?
+-select * from hr.employees where commission_pct is null;
+
+5.Select all column form Employees who has has salary more than 10000 and joined in 2006? 
+-select * from hr.employees where salary >10000 and hire_date between '01-jan-06' and '30-dec-06';
+-select * from hr.employees where salary >10000 and to_char(hire_date,'yyyy')=2006;
+-select * from hr.employees where salary>10000 and to_char(hire-date,'yy')=06;
+
+6.Select all column from Employees who has has salary more than 10000 and join after 2006? 
+-select * from hr.employees where salary>10000 and to_char(hire_date,'yyyy')>2006;
+
+7.Display employees who joined in between 2002 and 2005? *
+-select * from hr.employees where to_char(hire_date,'yyyy')>=2002 and to_char(hire_date,'yyyy')<=2005;
+-select * from hr.employees where hire_date between '01-jan-02' and '31-dec-05';
+
+8.Display the first name and join date of the employees who joined in 2005 or work in dept 50. *
+-select first_name,hire_date from hr.employees where to_char(hire_date,'yyyy')=2005 or department_id=50;
+
+9.Display first name and experience of the employees? *
+-select first_name,round((sysdate-hire_date)/365.250) as experience from hr.employees;
+
+10.Display Employees from Employees who has salary between 5000 and 12000 and First Name start with 'A'?
+-select * from hr.employees where salary between 5000 and 12000 and first_name like 'A%';
+
+11.Display Employees from Employees who has salary between 5000 and 12000 and Last Name end with 'a'? 
+-select * from hr.employees where salary between 5000 and 12000 and last_name like '%a';
+
+12.Select all Employees from Employees who work in who does not receive commission and last name has 'i'? 
+-select * from hr.employees where commission_pct is null and last_name like '%i%';
+13.Time format
+-select to_char(hire-date,'MON') as hire_date from hr.employees where to_char(hire_date,'MON')='Jun';
+-select to_char(hire_date,'mm') as hire_date from hr.employees where to_char(hire_date,'mm')=7;
+-select to_char(hire_date,'yyyy') as hire_date from hr.employees where to_char(hire_date,'yyyy')=2006;
+-select to_char(hire_date,'yy') as hire_date from hr.employees where to_char(hire_date,'yy')=06;
+-select to_char(hire_date,'dy') as hire_date from hr.employees where to_char(hire_date,'dy')='FRI';
+-select to_char(hire_date,'dd') as hire_date from hr.employees where to_char(hire_date,'dd')=24;
+
