@@ -19,3 +19,4 @@ git merge <branch name> ==> to merge the changes made.
 
 
 
+git checkout sqlfundamentas
